@@ -1,0 +1,4 @@
+/*Dette er for å gjøre inputboksen til antall mindre, jeg valgte å gjøre dette med egen css*/
+#antall{
+    width: 40px;
+}
