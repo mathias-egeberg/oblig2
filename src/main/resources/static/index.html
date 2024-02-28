@@ -44,10 +44,19 @@
                     </div>
                 </form>
                 <br>
-                <button class="btn btn-success" onclick="regData()">Kjøp bilett</button>
+                <div>
+                    <button class="btn btn-success" onclick="regData()">Kjøp bilett</button>
+                    <button class="btn btn-outline-info" onclick="hentAlle()">Hent biletter</button>
+                    <button class="btn btn-outline-danger" onclick="slettAlle()">Slett bieltter</button>
+                </div>
             </div>
         </div>
-        <div id="output"></div>
+        <div class="container">
+            <table class="table table-striped" id="output">
+
+            </table>
+        </div>
+
     </div>
 
 

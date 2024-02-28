@@ -21,4 +21,9 @@ public class BilettController {
     public List<Biletter> hentAlle(){
         return alleBiletter;
     }
+
+    @GetMapping ("/slettAlle")
+    public void slettAlle(){
+        alleBiletter.clear();
+    }
 }

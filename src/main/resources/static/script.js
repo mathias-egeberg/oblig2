@@ -2,7 +2,7 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
 
 function regData(){
     const biletter = {
-        film : $("#film").val(),
+        film : $("#dropdown").val(),
         antall : $("#antall").val(),
         navn : $("#navn").val(),
         telefon : $("#telefon").val(),
@@ -11,7 +11,7 @@ function regData(){
     $.post("/lagre", biletter, function (){
         hentAlle();
     });
-    $("#film").val("");
+    $("#dropdown").val("");
     $("#antall").val("");
     $("#navn").val("");
     $("#telefon").val("");
@@ -23,6 +23,13 @@ function hentAlle(){
         formaterOutput(data);
     });
 }
+
+function slettAlle(){
+    $.get("/slettAlle", function (){
+        hentAlle()
+    })
+}
+
 
 function formaterOutput(bilettene){
     let ut = "<table><tr><th>Film</th><th>Antall</th><th>Navn</th><th>Telefon</th><th>Epost</th></tr>";
